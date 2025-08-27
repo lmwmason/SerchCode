@@ -14,14 +14,35 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #cee2d7;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(0, 0, 0);
+}
+
+.App-header input[type="search"] {
+  width: 300px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 2px solid #b5aaaa;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.App-header input[type="search"]:focus {
+  border-color: #2600ff;
+  outline: none;
+}
+
+.App-header input[type="search"]::placeholder {
+  color: #888;
+  font-style: italic;
 }
 
 .App-link {
@@ -35,4 +56,53 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px 30px;
+    color: rgb(89, 106, 91);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu-title a {
+    text-decoration: none;
+    color: rgb(16, 4, 4);
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.menu-title a:hover {
+    color: #000000;
+}
+
+.menu-list {
+    display: flex;
+    gap: 25px;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: rgb(10, 10, 10);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-item a:hover {
+    background-color: #575757;
+    color: #fff;
+}
+
+.menu-item.active a {
+    background-color: #575757;
+    color: #fff;
+    font-weight: bold;
 }
